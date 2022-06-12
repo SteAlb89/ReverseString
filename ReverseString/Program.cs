@@ -1,23 +1,22 @@
 ﻿using System;
 
-namespace ReverseString
+namespace ReverseString2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter a string: ");
 
-
-            Console.WriteLine("Enter the word to reverse :");
             string word = Console.ReadLine();
 
-            char[] cArray = word.ToCharArray();
-            string wordReverse = String.Empty;
-            for (int i = cArray.Length - 1; i > -1; i--)
+            string reverse = string.Empty;
+
+            for (int i = word.Length - 1; i >= 0; i--)
             {
-                wordReverse += cArray[i];
+                reverse += word[i];
             }
-            Console.WriteLine("Your reverse word is: " + wordReverse);
+            Console.WriteLine($"Your reverse string is : {reverse}");
         }
     }
 }
